@@ -144,6 +144,10 @@ public:
 	/// @param blends the memory from where to copy the material blending data - should be block_extent^3 * sizeof(BlendFactor) bytes
 	void ModifyBlockMaterialData(const float3& coords, const MaterialId* materials, const BlendFactor* blends);
 
+	/// Returns the amount of memory used for the compressed blocks in the grid
+	/// @return memory size in bytes
+	unsigned GetGridBlocksMemorySize();
+
 	VoxelGrid* GetInternalRepresentation() const;
 
 private:

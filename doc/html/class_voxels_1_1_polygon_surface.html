@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Voxels Library
-   &#160;<span id="projectnumber">0.5</span>
+   &#160;<span id="projectnumber">0.6</span>
    </div>
    <div id="projectbrief">Voxel grid manipulation and surface generation library (c) 2014 Stoyan Nikolov</div>
   </td>
@@ -128,6 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab60eb62dfd91e4192a615be7085163f2"><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
 <a class="el" href="struct_voxels_1_1_polygonization_statistics.html">PolygonizationStatistics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voxels_1_1_polygon_surface.html#ab60eb62dfd91e4192a615be7085163f2">GetStatistics</a> () const =0</td></tr>
 <tr class="separator:ab60eb62dfd91e4192a615be7085163f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a18fdac7f3dbede772712ee0be6180"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voxels_1_1_polygon_surface.html#a35a18fdac7f3dbede772712ee0be6180">GetCacheSizeBytes</a> () const =0</td></tr>
+<tr class="separator:a35a18fdac7f3dbede772712ee0be6180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaae5f942f5d35be27c85b0c90a0a3af"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voxels_1_1_polygon_surface.html#aaaae5f942f5d35be27c85b0c90a0a3af">GetPolygonDataSizeBytes</a> () const =0</td></tr>
+<tr class="separator:aaaae5f942f5d35be27c85b0c90a0a3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed6708b739a668ad9a501a208d31858"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voxels_1_1_polygon_surface.html#aaed6708b739a668ad9a501a208d31858">Destroy</a> ()=0</td></tr>
 <tr class="separator:aaed6708b739a668ad9a501a208d31858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -239,6 +243,31 @@ static VOXELS_API const unsigned&#160;</td><td class="memItemRight" valign="bott
 
 </div>
 </div>
+<a class="anchor" id="a35a18fdac7f3dbede772712ee0be6180"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned Voxels::PolygonSurface::GetCacheSizeBytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>After the polygonization a material cache is saved in the polygon map. The cache is used to make subsequent grid modifications faster. This method returns the size of the cache in bytes. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the material cache </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6859b91329448c31185d5835ea9f2279"></a>
 <div class="memitem">
 <div class="memproto">
@@ -289,6 +318,31 @@ static VOXELS_API const unsigned&#160;</td><td class="memItemRight" valign="bott
 
 </div>
 </div>
+<a class="anchor" id="aaaae5f942f5d35be27c85b0c90a0a3af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned Voxels::PolygonSurface::GetPolygonDataSizeBytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the total size in bytes of the polygon data stored in this structure </p>
+<dl class="section return"><dt>Returns</dt><dd>the total size in bytes of the polygon data </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ab60eb62dfd91e4192a615be7085163f2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +377,7 @@ static VOXELS_API const unsigned&#160;</td><td class="memItemRight" valign="bott
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>Voxels</b></li><li class="navelem"><a class="el" href="class_voxels_1_1_polygon_surface.html">PolygonSurface</a></li>
-    <li class="footer">Generated on Mon Feb 10 2014 21:24:20 for Voxels Library by
+    <li class="footer">Generated on Sun May 11 2014 10:35:37 for Voxels Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

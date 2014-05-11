@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Voxels Library
-   &#160;<span id="projectnumber">0.5</span>
+   &#160;<span id="projectnumber">0.6</span>
    </div>
    <div id="projectbrief">Voxel grid manipulation and surface generation library (c) 2014 Stoyan Nikolov</div>
   </td>
@@ -200,50 +200,55 @@ $(document).ready(function(){initNavTree('_polygonizer_8h_source.html','');});
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="struct_voxels_1_1_polygonization_statistics.html">PolygonizationStatistics</a>* <a class="code" href="class_voxels_1_1_polygon_surface.html#ab60eb62dfd91e4192a615be7085163f2">GetStatistics</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_voxels_1_1_polygon_surface.html#aaed6708b739a668ad9a501a208d31858">Destroy</a>() = 0;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    VOXELS_API <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> INVALID_ID;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html">  172</a></span>&#160;<span class="keyword">struct </span>VOXELS_API <a class="code" href="struct_voxels_1_1_modification.html">Modification</a></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_voxels_1_1_modification.html">Modification</a>* Create();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html#a4c333393d80df41fb8fd0aa72b637202">  180</a></span>&#160;    <a class="code" href="class_voxels_1_1_polygon_surface.html">PolygonSurface</a>* <a class="code" href="struct_voxels_1_1_modification.html#a4c333393d80df41fb8fd0aa72b637202">Map</a>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html#a8bf8073d109b5177d9f9e98a5a375bc0">  184</a></span>&#160;    <a class="code" href="struct_voxels_1_1float3.html">float3</a> <a class="code" href="struct_voxels_1_1_modification.html#a8bf8073d109b5177d9f9e98a5a375bc0">MinCornerModified</a>; <span class="comment">// in GRID coordinates</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    </div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html#a30c5f667c8457f7bb6a1ee4927ca02c8">  188</a></span>&#160;    <a class="code" href="struct_voxels_1_1float3.html">float3</a> <a class="code" href="struct_voxels_1_1_modification.html#a30c5f667c8457f7bb6a1ee4927ca02c8">MaxCornerModified</a>; <span class="comment">// in GRID coordinates</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span>* GetModifiedBlocks(<span class="keywordtype">unsigned</span>* count) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// with it. The retrieved block pointers are invalidated.</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Destroy() = 0;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="struct_voxels_1_1_modification.html">Modification</a>();</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_voxels_1_1_polygonizer.html">  205</a></span>&#160;<span class="keyword">class </span>VOXELS_API <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>();</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    ~<a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_voxels_1_1_polygon_surface.html#a35a18fdac7f3dbede772712ee0be6180">GetCacheSizeBytes</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_voxels_1_1_polygon_surface.html#aaaae5f942f5d35be27c85b0c90a0a3af">GetPolygonDataSizeBytes</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_voxels_1_1_polygon_surface.html#aaed6708b739a668ad9a501a208d31858">Destroy</a>() = 0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    VOXELS_API <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> INVALID_ID;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html">  182</a></span>&#160;<span class="keyword">struct </span>VOXELS_API <a class="code" href="struct_voxels_1_1_modification.html">Modification</a></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_voxels_1_1_modification.html">Modification</a>* Create();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html#a4c333393d80df41fb8fd0aa72b637202">  190</a></span>&#160;    <a class="code" href="class_voxels_1_1_polygon_surface.html">PolygonSurface</a>* <a class="code" href="struct_voxels_1_1_modification.html#a4c333393d80df41fb8fd0aa72b637202">Map</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html#a8bf8073d109b5177d9f9e98a5a375bc0">  194</a></span>&#160;    <a class="code" href="struct_voxels_1_1float3.html">float3</a> <a class="code" href="struct_voxels_1_1_modification.html#a8bf8073d109b5177d9f9e98a5a375bc0">MinCornerModified</a>; <span class="comment">// in GRID coordinates</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="struct_voxels_1_1_modification.html#a30c5f667c8457f7bb6a1ee4927ca02c8">  198</a></span>&#160;    <a class="code" href="struct_voxels_1_1float3.html">float3</a> <a class="code" href="struct_voxels_1_1_modification.html#a30c5f667c8457f7bb6a1ee4927ca02c8">MaxCornerModified</a>; <span class="comment">// in GRID coordinates</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span>* GetModifiedBlocks(<span class="keywordtype">unsigned</span>* count) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">// with it. The retrieved block pointers are invalidated.</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Destroy() = 0;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="struct_voxels_1_1_modification.html">Modification</a>();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;};</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="class_voxels_1_1_polygon_surface.html">PolygonSurface</a>* Execute(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp; grid,</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_voxels_1_1_material_map.html">MaterialMap</a>* materials,</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="struct_voxels_1_1_modification.html">Modification</a>* modification = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>&amp;);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>&amp;);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">class </span>TransVoxelImpl* m_Impl;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;};</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="class_voxels_1_1_polygonizer.html">  215</a></span>&#160;<span class="keyword">class </span>VOXELS_API <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    ~<a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="class_voxels_1_1_polygon_surface.html">PolygonSurface</a>* Execute(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp; grid,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_voxels_1_1_material_map.html">MaterialMap</a>* materials,</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="struct_voxels_1_1_modification.html">Modification</a>* modification = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>&amp;);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_polygonizer.html">Polygonizer</a>&amp;);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">class </span>TransVoxelImpl* m_Impl;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;};</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
 <div class="ttc" id="class_voxels_1_1_polygon_surface_html_a1da8f4ed75324d6679b82ba751435cf9"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#a1da8f4ed75324d6679b82ba751435cf9">Voxels::PolygonSurface::GetLevelsCount</a></div><div class="ttdeci">virtual unsigned GetLevelsCount() const =0</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_a2a88dc5dd4f9f55e8688cee822eef3a5"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#a2a88dc5dd4f9f55e8688cee822eef3a5">Voxels::BlockPolygons::GetIndices</a></div><div class="ttdeci">virtual const unsigned * GetIndices(unsigned *count) const =0</div></div>
-<div class="ttc" id="struct_voxels_1_1_modification_html_a8bf8073d109b5177d9f9e98a5a375bc0"><div class="ttname"><a href="struct_voxels_1_1_modification.html#a8bf8073d109b5177d9f9e98a5a375bc0">Voxels::Modification::MinCornerModified</a></div><div class="ttdeci">float3 MinCornerModified</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:184</div></div>
+<div class="ttc" id="class_voxels_1_1_polygon_surface_html_aaaae5f942f5d35be27c85b0c90a0a3af"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#aaaae5f942f5d35be27c85b0c90a0a3af">Voxels::PolygonSurface::GetPolygonDataSizeBytes</a></div><div class="ttdeci">virtual unsigned GetPolygonDataSizeBytes() const =0</div></div>
+<div class="ttc" id="struct_voxels_1_1_modification_html_a8bf8073d109b5177d9f9e98a5a375bc0"><div class="ttname"><a href="struct_voxels_1_1_modification.html#a8bf8073d109b5177d9f9e98a5a375bc0">Voxels::Modification::MinCornerModified</a></div><div class="ttdeci">float3 MinCornerModified</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:194</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_ab43c106bac5ec99b390af750043c4ddc"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#ab43c106bac5ec99b390af750043c4ddc">Voxels::BlockPolygons::GetTransitionVertices</a></div><div class="ttdeci">virtual const PolygonVertex * GetTransitionVertices(TransitionFaceId face, unsigned *count) const =0</div></div>
 <div class="ttc" id="struct_voxels_1_1_polygonization_statistics_html"><div class="ttname"><a href="struct_voxels_1_1_polygonization_statistics.html">Voxels::PolygonizationStatistics</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:110</div></div>
 <div class="ttc" id="struct_voxels_1_1float3_html"><div class="ttname"><a href="struct_voxels_1_1float3.html">Voxels::float3</a></div><div class="ttdef"><b>Definition:</b> Structs.h:11</div></div>
@@ -253,26 +258,27 @@ $(document).ready(function(){initNavTree('_polygonizer_8h_source.html','');});
 <div class="ttc" id="struct_voxels_1_1_polygon_vertex_html_abffe8d0eee82b54d148ea01765b98e75"><div class="ttname"><a href="struct_voxels_1_1_polygon_vertex.html#abffe8d0eee82b54d148ea01765b98e75">Voxels::PolygonVertex::Normal</a></div><div class="ttdeci">float3 Normal</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:29</div></div>
 <div class="ttc" id="struct_voxels_1_1_polygonization_statistics_html_a18849ecf5790725391b1bc1dd8e4d034"><div class="ttname"><a href="struct_voxels_1_1_polygonization_statistics.html#a18849ecf5790725391b1bc1dd8e4d034">Voxels::PolygonizationStatistics::NonTrivialCells</a></div><div class="ttdeci">unsigned NonTrivialCells</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:122</div></div>
 <div class="ttc" id="class_voxels_1_1_polygon_surface_html_ab60eb62dfd91e4192a615be7085163f2"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#ab60eb62dfd91e4192a615be7085163f2">Voxels::PolygonSurface::GetStatistics</a></div><div class="ttdeci">virtual const PolygonizationStatistics * GetStatistics() const =0</div></div>
+<div class="ttc" id="class_voxels_1_1_polygon_surface_html_a35a18fdac7f3dbede772712ee0be6180"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#a35a18fdac7f3dbede772712ee0be6180">Voxels::PolygonSurface::GetCacheSizeBytes</a></div><div class="ttdeci">virtual unsigned GetCacheSizeBytes() const =0</div></div>
 <div class="ttc" id="struct_voxels_1_1float4_html"><div class="ttname"><a href="struct_voxels_1_1float4.html">Voxels::float4</a></div><div class="ttdef"><b>Definition:</b> Structs.h:25</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html">Voxels::BlockPolygons</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:52</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_a105a6571e8db45bfc0dc9a4d04d38a44"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#a105a6571e8db45bfc0dc9a4d04d38a44">Voxels::BlockPolygons::TransitionFaceId</a></div><div class="ttdeci">TransitionFaceId</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:58</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_ac02045c5c29cef93ed3406a54a8921fc"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#ac02045c5c29cef93ed3406a54a8921fc">Voxels::BlockPolygons::GetId</a></div><div class="ttdeci">virtual unsigned GetId() const =0</div></div>
-<div class="ttc" id="class_voxels_1_1_polygonizer_html"><div class="ttname"><a href="class_voxels_1_1_polygonizer.html">Voxels::Polygonizer</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:205</div></div>
+<div class="ttc" id="class_voxels_1_1_polygonizer_html"><div class="ttname"><a href="class_voxels_1_1_polygonizer.html">Voxels::Polygonizer</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:215</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_a51e47714630deb06ed7831bd40ed4137"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#a51e47714630deb06ed7831bd40ed4137">Voxels::BlockPolygons::GetMinimalCorner</a></div><div class="ttdeci">virtual float3 GetMinimalCorner() const =0</div></div>
 <div class="ttc" id="struct_voxels_1_1_polygonization_statistics_html_a3257b4e2b0e19f402d610ab0bc0980b9"><div class="ttname"><a href="struct_voxels_1_1_polygonization_statistics.html#a3257b4e2b0e19f402d610ab0bc0980b9">Voxels::PolygonizationStatistics::BlocksCalculated</a></div><div class="ttdeci">unsigned BlocksCalculated</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:114</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_a80e07e786ae62fde738cb5bca8cf4fb7"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#a80e07e786ae62fde738cb5bca8cf4fb7">Voxels::BlockPolygons::GetMaximalCorner</a></div><div class="ttdeci">virtual float3 GetMaximalCorner() const =0</div></div>
 <div class="ttc" id="struct_voxels_1_1_polygonization_statistics_html_a877f4c741327d35a93c20e56d4bc33bd"><div class="ttname"><a href="struct_voxels_1_1_polygonization_statistics.html#a877f4c741327d35a93c20e56d4bc33bd">Voxels::PolygonizationStatistics::DegenerateTrianglesRemoved</a></div><div class="ttdeci">unsigned DegenerateTrianglesRemoved</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:126</div></div>
 <div class="ttc" id="class_voxels_1_1_polygon_surface_html"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html">Voxels::PolygonSurface</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:136</div></div>
-<div class="ttc" id="struct_voxels_1_1_modification_html_a30c5f667c8457f7bb6a1ee4927ca02c8"><div class="ttname"><a href="struct_voxels_1_1_modification.html#a30c5f667c8457f7bb6a1ee4927ca02c8">Voxels::Modification::MaxCornerModified</a></div><div class="ttdeci">float3 MaxCornerModified</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:188</div></div>
+<div class="ttc" id="struct_voxels_1_1_modification_html_a30c5f667c8457f7bb6a1ee4927ca02c8"><div class="ttname"><a href="struct_voxels_1_1_modification.html#a30c5f667c8457f7bb6a1ee4927ca02c8">Voxels::Modification::MaxCornerModified</a></div><div class="ttdeci">float3 MaxCornerModified</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:198</div></div>
 <div class="ttc" id="class_voxels_1_1_polygon_surface_html_a6859b91329448c31185d5835ea9f2279"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#a6859b91329448c31185d5835ea9f2279">Voxels::PolygonSurface::GetExtents</a></div><div class="ttdeci">virtual float3 GetExtents() const =0</div></div>
 <div class="ttc" id="struct_voxels_1_1_polygon_vertex_html_a07da9e7fc5cc1c66e097ba2dbe5d0cb1"><div class="ttname"><a href="struct_voxels_1_1_polygon_vertex.html#a07da9e7fc5cc1c66e097ba2dbe5d0cb1">Voxels::PolygonVertex::SecondaryPosition</a></div><div class="ttdeci">float4 SecondaryPosition</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:25</div></div>
-<div class="ttc" id="struct_voxels_1_1_modification_html_a4c333393d80df41fb8fd0aa72b637202"><div class="ttname"><a href="struct_voxels_1_1_modification.html#a4c333393d80df41fb8fd0aa72b637202">Voxels::Modification::Map</a></div><div class="ttdeci">PolygonSurface * Map</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:180</div></div>
+<div class="ttc" id="struct_voxels_1_1_modification_html_a4c333393d80df41fb8fd0aa72b637202"><div class="ttname"><a href="struct_voxels_1_1_modification.html#a4c333393d80df41fb8fd0aa72b637202">Voxels::Modification::Map</a></div><div class="ttdeci">PolygonSurface * Map</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:190</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_a962030589694dcd956bbe4e14ccacda1"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#a962030589694dcd956bbe4e14ccacda1">Voxels::BlockPolygons::GetTransitionIndices</a></div><div class="ttdeci">virtual const unsigned * GetTransitionIndices(TransitionFaceId face, unsigned *count) const =0</div></div>
 <div class="ttc" id="struct_voxels_1_1_polygon_vertex_html_a8fb2c8b598be3d51a2b81ec79afa0e55"><div class="ttname"><a href="struct_voxels_1_1_polygon_vertex.html#a8fb2c8b598be3d51a2b81ec79afa0e55">Voxels::PolygonVertex::Position</a></div><div class="ttdeci">float3 Position</div><div class="ttdef"><b>Definition:</b> Polygonizer.h:18</div></div>
 <div class="ttc" id="class_voxels_1_1_grid_html"><div class="ttname"><a href="class_voxels_1_1_grid.html">Voxels::Grid</a></div><div class="ttdef"><b>Definition:</b> Grid.h:29</div></div>
 <div class="ttc" id="class_voxels_1_1_polygon_surface_html_aaed6708b739a668ad9a501a208d31858"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#aaed6708b739a668ad9a501a208d31858">Voxels::PolygonSurface::Destroy</a></div><div class="ttdeci">virtual void Destroy()=0</div></div>
 <div class="ttc" id="class_voxels_1_1_block_polygons_html_a445901c7f183e7e90c80852d3202d94f"><div class="ttname"><a href="class_voxels_1_1_block_polygons.html#a445901c7f183e7e90c80852d3202d94f">Voxels::BlockPolygons::GetVertices</a></div><div class="ttdeci">virtual const PolygonVertex * GetVertices(unsigned *count) const =0</div></div>
-<div class="ttc" id="struct_voxels_1_1_modification_html"><div class="ttname"><a href="struct_voxels_1_1_modification.html">Voxels::Modification</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:172</div></div>
+<div class="ttc" id="struct_voxels_1_1_modification_html"><div class="ttname"><a href="struct_voxels_1_1_modification.html">Voxels::Modification</a></div><div class="ttdef"><b>Definition:</b> Polygonizer.h:182</div></div>
 <div class="ttc" id="class_voxels_1_1_material_map_html"><div class="ttname"><a href="class_voxels_1_1_material_map.html">Voxels::MaterialMap</a></div><div class="ttdef"><b>Definition:</b> MaterialMap.h:13</div></div>
 <div class="ttc" id="class_voxels_1_1_polygon_surface_html_aabbfc6763243c7097cf86b215d2da0d3"><div class="ttname"><a href="class_voxels_1_1_polygon_surface.html#aabbfc6763243c7097cf86b215d2da0d3">Voxels::PolygonSurface::GetBlocksForLevelCount</a></div><div class="ttdeci">virtual unsigned GetBlocksForLevelCount(unsigned level) const =0</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -281,7 +287,7 @@ $(document).ready(function(){initNavTree('_polygonizer_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Polygonizer.h</b></li>
-    <li class="footer">Generated on Mon Feb 10 2014 21:24:20 for Voxels Library by
+    <li class="footer">Generated on Sun May 11 2014 10:35:37 for Voxels Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

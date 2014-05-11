@@ -6,6 +6,7 @@ var class_voxels_1_1_grid =
     [ "GetBlockExtent", "class_voxels_1_1_grid.html#ac427e28f3238bbb5059146788247ee10", null ],
     [ "GetBlockMaterialData", "class_voxels_1_1_grid.html#ac70c56fc2701731609434326cbe8f0a9", null ],
     [ "GetDepth", "class_voxels_1_1_grid.html#aa173b3372df306fe3f71efa1f15b24c3", null ],
+    [ "GetGridBlocksMemorySize", "class_voxels_1_1_grid.html#a510784c8f44e48bc42a6955d1d32fa81", null ],
     [ "GetHeight", "class_voxels_1_1_grid.html#a0e913fe30f1138f85f47f07502be2d60", null ],
     [ "GetInternalRepresentation", "class_voxels_1_1_grid.html#a4ae11b008ced3252bf2e25354e8d7c8d", null ],
     [ "GetWidth", "class_voxels_1_1_grid.html#a37f67f44c72f7a241fbbf0f7443b1bbd", null ],

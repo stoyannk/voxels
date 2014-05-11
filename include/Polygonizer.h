@@ -160,10 +160,20 @@ public:
 	/// @return statistics about the polygonization process
 	virtual const PolygonizationStatistics* GetStatistics() const = 0;
 
+	/// After the polygonization a material cache is saved in the polygon map.
+	/// The cache is used to make subsequent grid modifications faster.
+	/// This method returns the size of the cache in bytes.
+	/// @return the size of the material cache
+	virtual unsigned GetCacheSizeBytes() const = 0;
+
+	/// Get the total size in bytes of the polygon data stored in this structure
+	/// @return the total size in bytes of the polygon data
+	virtual unsigned GetPolygonDataSizeBytes() const = 0;
+
 	/// Destroys the Surface and frees all memory associated with it.
 	/// All pointers retrieved through this object become invalid.
 	virtual void Destroy() = 0;
-
+		
 	VOXELS_API static const unsigned INVALID_ID;
 };
 

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Voxels Library
-   &#160;<span id="projectnumber">0.5</span>
+   &#160;<span id="projectnumber">0.6</span>
    </div>
    <div id="projectbrief">Voxel grid manipulation and surface generation library (c) 2014 Stoyan Nikolov</div>
   </td>
@@ -178,20 +178,22 @@ $(document).ready(function(){initNavTree('_grid_8h_source.html','');});
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> ModifyBlockMaterialData(<span class="keyword">const</span> <a class="code" href="struct_voxels_1_1float3.html">float3</a>&amp; coords, <span class="keyword">const</span> MaterialId* materials, <span class="keyword">const</span> BlendFactor* blends);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    VoxelGrid* GetInternalRepresentation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    ~<a class="code" href="class_voxels_1_1_grid.html">Grid</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="class_voxels_1_1_grid.html">Grid</a>(VoxelGrid*);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="class_voxels_1_1_grid.html">Grid</a>(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp;);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp;);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    VoxelGrid* m_InternalGrid;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;};</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">unsigned</span> GetGridBlocksMemorySize();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    VoxelGrid* GetInternalRepresentation() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    ~<a class="code" href="class_voxels_1_1_grid.html">Grid</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="class_voxels_1_1_grid.html">Grid</a>(VoxelGrid*);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="class_voxels_1_1_grid.html">Grid</a>(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp;);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_voxels_1_1_grid.html">Grid</a>&amp;);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    VoxelGrid* m_InternalGrid;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="ttc" id="struct_voxels_1_1float3_html"><div class="ttname"><a href="struct_voxels_1_1float3.html">Voxels::float3</a></div><div class="ttdef"><b>Definition:</b> Structs.h:11</div></div>
 <div class="ttc" id="struct_voxels_1_1_grid_1_1_packed_grid_html"><div class="ttname"><a href="struct_voxels_1_1_grid_1_1_packed_grid.html">Voxels::Grid::PackedGrid</a></div><div class="ttdef"><b>Definition:</b> Grid.h:34</div></div>
 <div class="ttc" id="class_voxels_1_1_voxel_surface_html"><div class="ttname"><a href="class_voxels_1_1_voxel_surface.html">Voxels::VoxelSurface</a></div><div class="ttdef"><b>Definition:</b> VoxelSurface.h:13</div></div>
@@ -203,7 +205,7 @@ $(document).ready(function(){initNavTree('_grid_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>Grid.h</b></li>
-    <li class="footer">Generated on Mon Feb 10 2014 21:24:20 for Voxels Library by
+    <li class="footer">Generated on Sun May 11 2014 10:35:37 for Voxels Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
