@@ -36,31 +36,26 @@ can be summarized as follows:
  - SSE2-enabled processor
  - **Voxels** scales very well across processor cores; the more available on the machine - the faster the polygonization process will be.
 
+The library is not strictly cross platform at the moment. I haven't tried it on other targets, but there shouldn't be hurdles porting it.
+ 
 ## Documentation
 
-Detailed documentation is available in the library packet.
+Detailed documentation is available in the doc_source folder.
  
 ## Samples
 
 A sample application that uses **Voxels** is available on http://github.com/stoyannk/volumerendering. A pre-built version of the sample with 
 editing functionality is available in the Download section.
  
-## Limitations
-
-This Free version of **Voxels** has a grid limit of 128x128x128 voxels. If you need and unlimited version - please write to me directly and I'll send it.
-I would like to know the developers using the library as feedback is extremely important for the future of the library.
  
 ## Acknowledgements
 
 **Voxels** uses the TransVoxel algorithm as described in:
  Lengyel, Eric. “Voxel-Based Terrain for Real-Time Virtual Simulations”. PhD diss., University of California at Davis, 2010.
  For more information please refer to http://www.terathon.com/voxels/.
+ **Voxels** uses the GLM maths library http://glm.g-truc.net/0.9.7/index.html
  
 ## License
 
-You can use *Voxels* for both commercial and non-commercial applications but you should clearly state 
-that you use the library. The Free versions of the library are artificially limited in the size of the Grid they support - 
-128x128x128. For unlimited versions please contact me. You will receive the unlimited version but I would like to 
-know who is using it actively as feedback is vital for enhancing **Voxels** in the future.
-
+The library is licensed under the permissive 3-clause BSD license. 
 Please refer to the LICENSE file for all the details.
