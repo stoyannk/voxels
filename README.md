@@ -8,8 +8,7 @@ Official *Voxels* website: http://stoyannk.wordpress.com/voxels-library/
 triangle soups. The library supports grid compression and fast polygonization
 using the TransVoxel algorithm.
 
-**Voxels** is still in *alpha*. I plan to extend the library to support more platforms and features. Feedback is highly 
-appreciated.
+**Voxels** is in *alpha*. Unfortunately I don't have enough time to dedicate it and at this point there are no plans to update the library. No significant changes were applied to the library since the first pucblic release in 2014.
 
 ## Major features
  - Polygonization based on the TransVoxel algorithm
