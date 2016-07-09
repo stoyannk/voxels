@@ -9,6 +9,8 @@ triangle soups. The library supports grid compression and fast polygonization
 using the TransVoxel algorithm.
 
 **Voxels** is in *alpha*. Unfortunately I don't have enough time to dedicate it and at this point there are no plans to update the library. No significant changes were applied to the library since the first public release in 2014.
+The library depends on my dx11-framework for some utilities - nothing that can't be easily ported. When building make sure you have also downloaded the dx11-framework files.
+The gist of the library is the "TransVoxelImpl.cpp" file that implements the Transvoxel algorithm along with the LOD levels and the vertex transitions. The Grids can be sompressed and saved/loaded to disk - take a look at the "VoxelGrid.cpp" file.
 
 ## Major features
  - Polygonization based on the TransVoxel algorithm
